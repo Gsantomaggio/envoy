@@ -218,6 +218,8 @@ public:
   // State accessors
   WasmResult getProperty(absl::string_view path, std::string* result) override;
   WasmResult setProperty(absl::string_view path, absl::string_view value) override;
+  WasmResult setDynamicdata(absl::string_view path, absl::string_view value) override;
+
   WasmResult declareProperty(absl::string_view path,
                              Filters::Common::Expr::CelStatePrototypeConstPtr state_prototype);
 

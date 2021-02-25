@@ -921,10 +921,10 @@ REPOSITORY_LOCATIONS_SPEC = dict(
         project_name = "WebAssembly for Proxies (C++ host implementation)",
         project_desc = "WebAssembly for Proxies (C++ host implementation)",
         project_url = "https://github.com/proxy-wasm/proxy-wasm-cpp-host",
-        version = "d1a2a7db59a72edacc9a6286b64280b72767d2d0",
-        sha256 = "3e81235c963291bd01f9425ed6e34d6b44ca0adc9f281b0cafc5cba6ad3bcc6d",
+        version = "dcfce2c319b26bd9109edd905d69f35e0b7cbc8e",
+        sha256 = "7ef0b220769b7ba536df40954451cb333822053e7030eff194e4a911472dc7d2",
         strip_prefix = "proxy-wasm-cpp-host-{version}",
-        urls = ["https://github.com/proxy-wasm/proxy-wasm-cpp-host/archive/{version}.tar.gz"],
+        urls = ["https://github.com/Gsantomaggio/proxy-wasm-cpp-host/archive/{version}.tar.gz"],
         use_category = ["dataplane_ext"],
         extensions = [
             "envoy.access_loggers.wasm",

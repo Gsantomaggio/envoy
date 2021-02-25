@@ -1120,6 +1120,22 @@ const Network::Connection* Context::getConnection() const {
   return nullptr;
 }
 
+WasmResult Context::setDynamicdata(absl::string_view path, absl::string_view value) {
+  auto* stream_info = getRequestStreamInfo();
+  if (!stream_info) {
+    return WasmResult::NotFound;
+  }
+  std::string key;
+  absl::StrAppend(&key, path);
+  ProtobufWkt::Struct metadata_val;
+  // auto& fields_a = *metadata_val.mutable_fields();
+  std::string metadata_value;
+  absl::StrAppend(&metadata_value, value);
+  
+  stream_info->setDynamicMetadata(key, metadata_val);
+  return WasmResult::Ok;
+}
+
 WasmResult Context::setProperty(absl::string_view path, absl::string_view value) {
   auto* stream_info = getRequestStreamInfo();
   if (!stream_info) {
